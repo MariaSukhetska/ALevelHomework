@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package ua.zhdanova.hw3;
 
 public class Task1 {
 
