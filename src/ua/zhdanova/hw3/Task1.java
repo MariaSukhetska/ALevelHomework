@@ -1,32 +1,24 @@
 package ua.zhdanova.hw3;
 
+import java.util.Scanner;
+
 public class Task1 {
-
-    public Boolean back(String A){
-
-        String B="";
-        String C=A.replace(" ","");
-        char[] mass =C.toCharArray();
-        char[] mass2=new char[mass.length];
-        for ( int i =mass.length-1; i>= 0;){
-            for(int j=0;j<mass2.length; j++){
-
-                mass2[j]=mass[i]; i--;
-
-                B += mass2[j];
-
-            }
-
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть рядок:");
+        String input = scanner.nextLine();
+        String stringWithoutSpaces = removeSpaces(input);
+        boolean isPalindrome = isPalindrome(stringWithoutSpaces);
+        if (isPalindrome) {
+            System.out.println("Рядок є паліндромом.");
+        } else {
+            System.out.println("рядок не є паліндромом.");
         }
-        System.out.println(B);
-        System.out.println(C);
-        return B.equalsIgnoreCase(C);
-
     }
-
-    public static void main(String args[]){
-        Task1 C=new Task1();
-        System.out.println(C.back("A man a plan a canal Panama"));
+    public static String removeSpaces(String str) {
+        return str.replaceAll("\\s+", "");
     }
-
+    public static boolean isPalindrome(String str) {
+        return str.equals(new StringBuilder(str).reverse().toString());
+    }
 }
