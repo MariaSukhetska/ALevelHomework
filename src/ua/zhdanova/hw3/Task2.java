@@ -14,7 +14,7 @@ public class Task2 {
         }
         System.out.println("Count: " + count);
     }
-    private static boolean isValidWord(String word) {
+    public static boolean isValidWord(String word) {
         char[] chars = word.toCharArray();
         for (char c : chars) {
             if (!Character.isAlphabetic(c)) {
