@@ -19,20 +19,18 @@ public class Task1 {
     }
 
     public static double average(int[] originalArray) {
-        int[] arrayCopy = originalArray.clone();
         int sum = 0;
-        for (int value : arrayCopy) {
+        for (int value : originalArray) {
             sum += value;
         }
-        return (double) sum / arrayCopy.length;
+        return (double) sum / originalArray.length;
     }
 
     public static double geometricMean(int[] originalArray) {
-        int[] arrayCopy = originalArray.clone();
         double product = 1.0;
-        for (int value : arrayCopy) {
+        for (int value : originalArray) {
             product *= value;
         }
-        return Math.pow(product, 1.0 / arrayCopy.length);
+        return Math.pow(product, 1.0 / originalArray.length);
     }
 }

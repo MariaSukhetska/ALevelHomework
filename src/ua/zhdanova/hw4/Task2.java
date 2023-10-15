@@ -16,9 +16,8 @@ public class Task2 {
         return array;
     }
     public static int countPrimes(int[] array) {
-        int[] arrayCopy = array.clone();
         int count = 0;
-        for (int num : arrayCopy) {
+        for (int num : array) {
             if (isPrime(num)) {
                 count++;
             }
