@@ -1,9 +1,9 @@
 package ua.zhdanova.hw6;
 
 public class Phone {
-    private String number;
-    private String model;
-    private double weight;
+    String number;
+     String model;
+     double weight;
 
     public Phone(String number, String model, double weight) {
         this.number = number;
@@ -20,10 +20,12 @@ public class Phone {
     }
 
     public void receiveCall(String name) {
+
         System.out.println("Телефонує " + name);
     }
 
     public String getNumber() {
+
         return number;
     }
 
@@ -33,9 +35,13 @@ public class Phone {
     }
 
     public static void main(String[] args) {
-        Phone phone1 = new Phone("0957958753", "iPhone", 100.0);
-        Phone phone2 = new Phone("0987654321", "Samsung", 150.50);
-        Phone phone3 = new Phone("0957958444", "Huawei", 120.0);
+        Phone phone1 = new Phone();
+        phone1.number = "0957958753";
+        phone1.model = "iPhone";
+        phone1.weight = 100.0;
+        Phone phone2 = new Phone("0987654321", "Samsung", 150.5);
+        Phone phone3 = new Phone("0957958444", "Huawei");
+        phone3.weight = 120.0;
 
         System.out.println(phone1);
         System.out.println(phone2);
