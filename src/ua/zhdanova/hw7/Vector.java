@@ -2,8 +2,9 @@ package ua.zhdanova.hw7;
 
 public class Vector {
 
-    public double x, y, z;
-
+    public double x;
+    public double y;
+    public double z;
     public Vector(double x, double y, double z) {
         this.x = x;
         this.y = y;
