@@ -22,7 +22,7 @@ public class Main {
         System.out.println("It eats: " + sleepyAnimal.getFood());
     }
 
-    public static Peat findSleepiestAnimal(Peat cat, Peat rabbit) {
+    private static Peat findSleepiestAnimal(Peat cat, Peat rabbit) {
         if (cat.getHoursOfSleeping() >= rabbit.getHoursOfSleeping()) {
             return cat;
         } else {
