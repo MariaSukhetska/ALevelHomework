@@ -1,12 +1,10 @@
 package ua.zhdanova.hw10;
 
-public class Figure {
+public abstract class Figure {
 
-    public double perimeter() {
-        return 0.0;
-    }
+    abstract double perimeter();
 
-    public double area() {
-        return 0.0;
-    }
+
+    abstract double area();
+
 }

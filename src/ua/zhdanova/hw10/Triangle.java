@@ -23,7 +23,6 @@ class Triangle extends Figure {
         return sideA + sideB + sideC;
     }
 
-    @Override
     public double area() {
         double s = perimeter() / 2;
         return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
