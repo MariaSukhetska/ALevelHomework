@@ -28,14 +28,15 @@ class Triangle extends Figure {
         return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
     }
 
-    public double areaWithSinFormula() {
+    public double area(double sideA, double sideB, double angleInDegrees) {
         double angleInRadians = Math.toRadians(angleInDegrees);
         return 0.5 * sideA * sideB * Math.sin(angleInRadians);
     }
 
-    public double areaWithBaseHeight() {
+    public double area(double base, double height) {
         return 0.5 * base * height;
     }
 }
+
 
 
