@@ -20,21 +20,21 @@ class Triangle extends Figure {
     @Override
     public double perimeter() {
 
-        return sideA + sideB + sideC;
+        return this.sideA + this.sideB + this.sideC;
     }
 
     public double area() {
         double s = perimeter() / 2;
-        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+        return Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC));
     }
 
     public double area(double sideA, double sideB, double angleInDegrees) {
         double angleInRadians = Math.toRadians(angleInDegrees);
-        return 0.5 * sideA * sideB * Math.sin(angleInRadians);
+        return 0.5 * this.sideA * this.sideB * Math.sin(angleInRadians);
     }
 
     public double area(double base, double height) {
-        return 0.5 * base * height;
+        return 0.5 * this.base * this.height;
     }
 }
 
