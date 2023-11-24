@@ -33,8 +33,8 @@ class Triangle extends Figure {
         return 0.5 * this.sideA * this.sideB * Math.sin(angleInRadians);
     }
 
-    public double area(double base, double height) {
-        return 0.5 * this.base * this.height;
+    public static double area(double base, double height) {
+        return 0.5 * base * height;
     }
 }
 
