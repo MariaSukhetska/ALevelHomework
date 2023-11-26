@@ -3,6 +3,11 @@ package ua.zhdanova.hw10;
 public class Circle extends Figure {
     private double radius;
 
+    @Override
+    public String toString() {
+        return Double.toString(area());
+    }
+
     public Circle(double radius) {
 
         this.radius = radius;

@@ -6,6 +6,12 @@ class Triangle extends Figure {
     private double sideC;
     private double base;
     private double height;
+
+    @Override
+    public String toString() {
+        return Double.toString(area());
+    }
+
     private double angleInDegrees;
 
     public Triangle(double sideA, double sideB, double sideC, double base, double height, double angleInDegrees) {
@@ -37,6 +43,5 @@ class Triangle extends Figure {
         return 0.5 * base * height;
     }
 }
-
 
 

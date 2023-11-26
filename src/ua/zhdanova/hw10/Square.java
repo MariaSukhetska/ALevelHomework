@@ -3,6 +3,11 @@ package ua.zhdanova.hw10;
 class Square extends Figure {
     private double side;
 
+    @Override
+    public String toString() {
+        return Double.toString(area());
+    }
+
     public Square(double side) {
         this.side = side;
     }
