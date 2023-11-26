@@ -28,7 +28,7 @@ class Triangle extends Figure {
         return Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC));
     }
 
-    public double area(double sideA, double sideB, double angleInDegrees) {
+    public double area(double angleInDegrees) {
         double angleInRadians = Math.toRadians(angleInDegrees);
         return 0.5 * this.sideA * this.sideB * Math.sin(angleInRadians);
     }
