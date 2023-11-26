@@ -2,6 +2,7 @@ package ua.zhdanova.hw13;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +17,7 @@ public class Main {
         Comparator<Figure> perimeterComparator= Comparator.comparingDouble(figure -> figure.perimeter());
         Comparator<Figure> comparator = areaComparator.thenComparing(perimeterComparator);
 
-        figures.sort(areaComparator);
-        figures.sort(perimeterComparator);
+        Collections.sort(figures,comparator);
         System.out.println(figures);
 
     }
