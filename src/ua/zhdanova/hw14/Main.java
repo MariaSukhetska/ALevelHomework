@@ -30,7 +30,7 @@ class Main {
     }
     private static Figure findFigure(List<Figure> figures, double difference) {
         return figures.stream()
-                .filter(figure -> figure.area() > findMinArea(figures) + difference)
+                .filter(figure -> figure.area() == findMinArea(figures) + difference)
                 .findFirst()
                 .orElse(null);
     }
