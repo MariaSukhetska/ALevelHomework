@@ -1,0 +1,19 @@
+1. Filtered Products:
+Eggs | Quantity: 10 | Price: 0.2
+Cucumbers | Quantity: 5 | Price: 0.8
+Apples | Quantity: 6 | Price: 1.2
+
+2. Total Quantity of all Products: 29
+
+3. Average Price of all Products: 1.2
+
+4. Sorted Products by Price (Descending):
+Chicken | Quantity: 2 | Price: 5.0
+Cheese | Quantity: 3 | Price: 2.5
+Apples | Quantity: 6 | Price: 1.2
+Cucumbers | Quantity: 5 | Price: 0.8
+Milk | Quantity: 2 | Price: 1.5
+Eggs | Quantity: 10 | Price: 0.2
+Bread | Quantity: 1 | Price: 1.0
+
+5. Total Cost of all Products: 34.7
