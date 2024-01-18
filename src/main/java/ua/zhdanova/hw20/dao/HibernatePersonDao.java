@@ -33,7 +33,7 @@ public class HibernatePersonDao implements Dao<Person> {
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-            session.persist(entity);
+            session.save(entity);
             transaction.commit();
             return entity;
         } catch (Exception e) {

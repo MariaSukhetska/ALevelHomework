@@ -9,8 +9,7 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-
-        <mapping class="org.example.model.Person"/>
+        <mapping class="ua.zhdanova.hw20.model.Person"/>
 
     </session-factory>
 </hibernate-configuration>

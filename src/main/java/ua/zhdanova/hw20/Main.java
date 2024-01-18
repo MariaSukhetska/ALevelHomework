@@ -18,9 +18,7 @@ public class Main {
             person3.setLastName("Jobs");
             person3.setLivingAddress("78910 Elm St");
 
-
             hibernatePersonDao.add(person3);
-
 
             List<Person> hibernatePersons = hibernatePersonDao.getAll();
             System.out.println("Persons retrieved using Hibernate:");
@@ -28,10 +26,8 @@ public class Main {
                 System.out.println(person);
             }
 
-
             person3.setLivingAddress("UpdatedLivingAddress");
             hibernatePersonDao.update(person3);
-
 
             hibernatePersons = hibernatePersonDao.getAll();
             System.out.println("Persons after update using Hibernate:");
@@ -39,9 +35,7 @@ public class Main {
                 System.out.println(person);
             }
 
-
             hibernatePersonDao.delete(person3);
-
 
             hibernatePersons = hibernatePersonDao.getAll();
             System.out.println("Persons after delete using Hibernate:");
@@ -63,10 +57,8 @@ public class Main {
             person2.setLastName("Smith");
             person2.setLivingAddress("4567 Oak St");
 
-
             jdbcPersonDao.add(person1);
             jdbcPersonDao.add(person2);
-
 
             List<Person> jdbcPersons = jdbcPersonDao.getAll();
             System.out.println("Persons retrieved using JDBC:");
@@ -74,10 +66,8 @@ public class Main {
                 System.out.println(person);
             }
 
-
             person1.setLastName("Mari");
             jdbcPersonDao.update(person1);
-
 
             jdbcPersons = jdbcPersonDao.getAll();
             System.out.println("Persons after update using JDBC:");
@@ -85,9 +75,7 @@ public class Main {
                 System.out.println(person);
             }
 
-
             jdbcPersonDao.delete(person2);
-
 
             jdbcPersons = jdbcPersonDao.getAll();
             System.out.println("Persons after delete using JDBC:");
@@ -95,9 +83,7 @@ public class Main {
                 System.out.println(person);
             }
         } catch (Exception e) {
-            System.out.println("Error during process data: ");
-            e.printStackTrace();
+            throw new RuntimeException("Error during process data: ");
         }
     }
 }
-

@@ -1,7 +1,6 @@
 package ua.zhdanova.hw20.util;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
@@ -10,9 +9,7 @@ public class HibernateUtil {
     static {
         try {
             Configuration configuration = new Configuration().configure();
-            StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-                    .applySettings(configuration.getProperties());
-            sessionFactory = configuration.buildSessionFactory(builder.build());
+            sessionFactory = configuration.buildSessionFactory();
         } catch (Exception e) {
             throw new RuntimeException("Can't initialize SessionFactory" + sessionFactory + e);
         }
