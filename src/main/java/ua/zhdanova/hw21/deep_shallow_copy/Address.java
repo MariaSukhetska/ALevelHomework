@@ -64,8 +64,6 @@ public class Address implements Cloneable {
     protected Object clone() {
         try {
             Address clonedAddress = (Address) super.clone();
-            // If there are nested objects, perform a deep copy here
-            // clonedAddress.setNestedObject(this.nestedObject.clone());
             return clonedAddress;
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);

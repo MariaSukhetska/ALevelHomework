@@ -86,7 +86,7 @@ public class Person implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Person clonedPerson = (Person) super.clone();
-        clonedPerson.address = (Address) address.clone(); // Assuming Address class has a proper clone method
+        clonedPerson.address = (Address) address.clone();
         return clonedPerson;
     }
 
