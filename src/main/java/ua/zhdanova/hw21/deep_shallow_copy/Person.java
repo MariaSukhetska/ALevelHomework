@@ -4,13 +4,9 @@ import java.util.Objects;
 
 public class Person implements Cloneable {
     private String firstName;
-
     private String lastName;
-
     private String livingAddress;
-
     private int age;
-
     private Address address;
 
     public Person(String firstName, String lastName, String livingAddress, int age, Address address) {
@@ -79,18 +75,18 @@ public class Person implements Cloneable {
     @Override
     public String toString() {
         return "Person{" +
-                "firstName='" + firstName + '\''
-                + ", lastName='" + lastName + '\''
-                + ", livingAddress='" + livingAddress + '\''
-                + ", age=" + age
-                + ", address=" + address
-                + '}';
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", livingAddress='" + livingAddress + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                '}';
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Person clonedPerson = (Person) super.clone();
-        clonedPerson.address = (Address) address.deepCopy();
+        clonedPerson.address = (Address) address.clone(); // Assuming Address class has a proper clone method
         return clonedPerson;
     }
 

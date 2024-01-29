@@ -4,11 +4,8 @@ import java.util.Objects;
 
 public class Address implements Cloneable {
     private String city;
-
     private String street;
-
     private int population;
-
 
     public Address(String city, String street, int population) {
         this.city = city;
@@ -56,19 +53,23 @@ public class Address implements Cloneable {
 
     @Override
     public String toString() {
-        return "Address{"
-                + "city='" + city + '\''
-                + ", street='" + street + '\''
-                + ", population=" + population
-                + '}';
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", population=" + population +
+                '}';
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
-    public Address deepCopy() throws CloneNotSupportedException {
-        return (Address) clone();
+    protected Object clone() {
+        try {
+            Address clonedAddress = (Address) super.clone();
+            // If there are nested objects, perform a deep copy here
+            // clonedAddress.setNestedObject(this.nestedObject.clone());
+            return clonedAddress;
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+
